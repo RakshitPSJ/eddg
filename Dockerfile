@@ -4,10 +4,9 @@ WORKDIR /app
 RUN git clone https://github.com/RakshitPSJ/eddg.git
 
 # Add gradle to the project
-FROM gradle:4.6-jdk8-alpine as build
+FROM gradle:6.8-jdk11 as build
 WORKDIR /app
 COPY --from=clone /app/eddg /app
-
 # Creating jar file of project by doing install clean build  stage of gradle
 RUN gradle clean build
 
