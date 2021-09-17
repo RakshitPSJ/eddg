@@ -10,6 +10,6 @@ import org.springframework.web.bind.annotation.RestController;
 public class EDDController {
     @GetMapping("")
     public ResponseEntity<String> getEdd() {
-        return ResponseEntity.ok().body("Hello world");
+        return ResponseEntity.ok().body("Hello world testingt");
     }
 }
